@@ -1,9 +1,9 @@
-import Link from "next/link";
+import HeroSection from "@/components/home/HeroSection";
 
 export default function Home() {
   return (
     <main>
-      <h2>Home</h2>
+      <HeroSection></HeroSection>
     </main>
   );
 }
