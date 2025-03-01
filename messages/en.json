@@ -1,0 +1,11 @@
+{
+  "HeroSection": {
+    "title": "title",
+    "items": {
+      "products": "Products",
+      "delivery": "Delivery",
+      "support": "Support",
+      "shops": "Shops"
+    }
+  }
+}

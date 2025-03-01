@@ -1,16 +1,21 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./HeroSection.module.css";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("HeroSection");
+  const [language, setLanguage] = useState("en");
   return (
     <header>
       <nav className={styles.navbar}>
         <div>
           <ul className={styles.items}>
-            <li>Products</li>
-            <li>Delivery</li>
-            <li>Support</li>
+            <li>{t("items.products")}</li>
+            <li>{t("items.delivery")}</li>
+            <li>{t("items.support")}</li>
           </ul>
         </div>
         <div>
@@ -22,9 +27,14 @@ export default function HeroSection() {
                 width={24}
                 height={24}
               />
-              <span>Shop</span>
+              <span>{t("items.shops")}</span>
             </li>
-            <li>Lang</li>
+            <li>
+              <select value={language} className={styles.languageSelector}>
+                <option value="en">English</option>
+                <option value="bs">Bosnian</option>
+              </select>
+            </li>
           </ul>
         </div>
       </nav>

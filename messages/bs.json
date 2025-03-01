@@ -1,0 +1,11 @@
+{
+  "HeroSection": {
+    "title": "title",
+    "items": {
+      "products": "Proizvodi",
+      "delivery": "Dostava",
+      "support": "Podrška",
+      "shops": "Prodavnice"
+    }
+  }
+}
