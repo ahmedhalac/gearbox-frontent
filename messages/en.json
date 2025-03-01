@@ -6,6 +6,10 @@
       "delivery": "Delivery",
       "support": "Support",
       "shops": "Shops"
+    },
+    "languages": {
+      "english": "English",
+      "bosnian": "Bosnian"
     }
   }
 }

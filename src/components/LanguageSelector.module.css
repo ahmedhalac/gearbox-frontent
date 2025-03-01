@@ -1,0 +1,35 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #fafafa;
+}
+
+.dropdownMenu {
+  position: absolute;
+  background: white;
+  border: none;
+  padding: 5px;
+  margin-top: 5px;
+  list-style: none;
+}
+
+.dropdownMenu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdownMenu li:hover {
+  background: #eee;
+}

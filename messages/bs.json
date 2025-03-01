@@ -6,6 +6,10 @@
       "delivery": "Dostava",
       "support": "Podrška",
       "shops": "Prodavnice"
+    },
+    "languages": {
+      "english": "Engleski",
+      "bosnian": "Bosanski"
     }
   }
 }

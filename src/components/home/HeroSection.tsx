@@ -1,13 +1,19 @@
 "use client";
-
-import React, { useState } from "react";
+import React from "react";
 import styles from "./HeroSection.module.css";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import LanguageSelector from "../LanguageSelector";
 
 export default function HeroSection() {
   const t = useTranslations("HeroSection");
-  const [language, setLanguage] = useState("en");
+  const router = useRouter();
+  const localActive = useLocale();
+
+  const handleLanguageChange = (country: string) => {
+    router.replace(`/${country}`);
+  };
   return (
     <header>
       <nav className={styles.navbar}>
@@ -30,10 +36,10 @@ export default function HeroSection() {
               <span>{t("items.shops")}</span>
             </li>
             <li>
-              <select value={language} className={styles.languageSelector}>
-                <option value="en">English</option>
-                <option value="bs">Bosnian</option>
-              </select>
+              <LanguageSelector
+                activeLang={localActive}
+                onChange={handleLanguageChange}
+              />
             </li>
           </ul>
         </div>
